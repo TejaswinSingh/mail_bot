@@ -197,25 +197,3 @@ class SmtpError(RuntimeError):
 
 class IllegalStopError(RuntimeError):
     pass
-
-
-"""
-my_credentials = {'email': "tejaswin2608@gmail.com", 'password': "xxlabmkghfwfpnfm"}
-try:
-    Outbox.start(flush_interval=10, max_queue_size=10, sender_credentials=my_credentials)
-except Exception as e: #imaplib.IMAP4.error as e: # invalid credentials
-    print(e)
-    raise e
-
-while True:
-    if Outbox.smtp_error_occurred():  #if this returns True, you must call Outbox.stop()
-        break
-    mail1 = {'subject': 'hey bud', 'to': 'vinnijammu18@gmail.com', 'body': 'Nice to meet you'}
-    Outbox.push(mail1)
-    mail2 = {'subject': 'Good morning', 'to': 'tejaswin04@gmail.com', 'body': 'Did you saw the sunrise today?'}
-    Outbox.push(mail2)
-    #time.sleep(10)
-
-#print(Outbox.smtp_error_occurred)
-Outbox.stop()
-"""
