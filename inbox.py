@@ -197,25 +197,3 @@ class ImapError(RuntimeError):
 
 class IllegalImapLogoutError(RuntimeError):
     pass
-
-
-"""
-try:
-    Inbox.start(refill_interval=100, username='tejaswin2608@gmail.com', password='xxlabmkghfwfpnfm')
-except Exception as e: #imaplib.IMAP4.error as e: # invalid credentials
-    print(e)
-    raise e
-while True:
-    try:
-        user = int(input("enter: "))
-        match user:
-            case 0:
-                print(Inbox.size())
-            case 1:
-                print(Inbox.pop())
-            case 2:
-                print('exiting')
-                break
-    except Exception:
-        break 
-Inbox.stop()  """
